@@ -7,3 +7,14 @@
     background-position: center;
     
 }
+.tag{
+    color: blue;
+    background-color: rgba(0, 0, 255, 0.218);
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: smaller;
+    height: 25px;
+}
+img{
+    height: 256px;
+}

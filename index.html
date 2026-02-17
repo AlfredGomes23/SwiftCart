@@ -21,9 +21,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="">
+<body class="bg-base-200">
     <!-- navbar -->
-    <nav class="navbar sticky top-0 z-10 px-32 mx-auto bg-white">
+    <nav class="navbar sticky top-0 z-10 px-0 md:px-32 mx-auto bg-white">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -62,18 +62,18 @@
     <!-- hero section -->
      <header class="hero">
         <div class=" w-full bg-black/50 h-full"></div>
-        <div class="w-7xl space-y-5 py-48 text-white">
-        <h2 class="text-4xl font-bold">Best Collection For You</h2>
-        <p class="w-2/5 text-[#d3d7de]">Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart</p>
+        <div class="md:w-7xl space-y-5 py-48 text-white text-center md:text-left">
+        <h2 class="text-3xl font-bold">Best Collection For You</h2>
+        <p class="md:w-2/5 text-[#d3d7de]">Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart</p>
         <button class="text-lg btn btn-primary">Shop Now</button>
     </div>
      </header>
     <!-- why us -->
-    <section class="space-y-5 my-5 max-w-7xl mx-auto bg-base-100">
-        <h2 class="font-bold text-4xl text-center">Why Choose Us</h2>
-        <p class="text-center text-lg">We provide the best shopping experience with top-notch services.</p>
-        <div class="flex gap-3 mt-10">
-            <div class="w-96 rounded-lg shadow-md p-5 bg-white">
+    <section class="space-y-5 my-15 max-w-7xl mx-auto ">
+        <h2 class="font-bold text-3xl text-center">Why Choose Us</h2>
+        <p class="text-center text-lg text-[#9ca2ac]">We provide the best shopping experience with top-notch services.</p>
+        <div class="flex flex-col md:flex-row gap-3 mt-10 space-y-5">
+            <div class="mx-auto w-96 rounded-lg shadow-md p-5 bg-white">
                 <div class="p-3 w-fit bg-[#eef2ff] rounded-md m-1 relative -top-10 left-5 shadow-md"><i class="fa-solid fa-truck-fast text-3xl text-primary"></i></div>
                 
                 <div class="space-y-5 pb-5">
@@ -81,7 +81,7 @@
                 <p class="text-[#9ca2ac]">Get your orders delivered to your doorstep quickly and efficiently.</p>
             </div>
             </div>
-            <div class="w-96 rounded-lg shadow-md p-5 bg-white">
+            <div class="mx-auto w-96 rounded-lg shadow-md p-5 bg-white">
                 <div class="p-3 w-fit bg-[#eef2ff] rounded-md m-1 relative -top-10 left-5 shadow-md"><i class="fa-regular fa-headphones text-3xl text-primary"></i></div>
                 
                 <div class="space-y-5 pb-5">
@@ -89,7 +89,7 @@
                 <p class="text-[#9ca2ac]">Our support team is available around the clock to assist you.</p>
             </div>
             </div>
-            <div class="w-96 rounded-lg shadow-md p-5 bg-white">
+            <div class="mx-auto w-96 rounded-lg shadow-md p-5 bg-white">
                 <div class="p-3 w-fit bg-[#eef2ff] rounded-md m-1 relative -top-10 left-5 shadow-md"><i class="fa-solid fa-shield-halved text-4xl text-primary"></i></div>
                 
                 <div class="space-y-5 pb-5">
@@ -97,7 +97,7 @@
                 <p class="text-[#9ca2ac]">Experience safe and secure transactions with our encrypted payment systems.</p>
             </div>
             </div>
-            <div class="w-96 rounded-lg shadow-md p-5 bg-white">
+            <div class="mx-auto w-96 rounded-lg shadow-md p-5 bg-white">
                 <div class="p-3 w-fit bg-[#eef2ff] rounded-md m-1 relative -top-10 left-5 shadow-md"><i class="fa-solid fa-arrows-rotate text-4xl text-primary"></i></div>
                 
                 <div class="space-y-5 pb-5">
@@ -112,13 +112,133 @@
         </div>
     </section>
     <!-- trending -->
-    <section>
-
+    <section class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold ml-5 md:ml-0 my-10">Trending Now</h2>
+        <!-- card container -->
+        <div id="cardContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-5"> 
+            <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+                <figure>
+                    <img src="./assets/Fjallraven - Foldsack No. 1 Backpack,.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <p class="flex justify-between">
+                        <span class="tag">Men's Clothing</span>
+                        <span class="text-[#9ca2ac]"><i class="fa-solid fa-star text-[#fdc700]"></i>3.9(120)</span>
+                    </p>
+                    <h2 class="card-title h-14">Fjallraven - Foldsack No. 1 Backpack</h2>
+                    <p>$199.5</p>
+                    <div class="card-actions justify-around">
+                        <button class="w-36 btn"><i class="fa-solid fa-eye"></i>Details</button>
+                        <button class="w-36 btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add</button>
+                    </div>
+                </div>
+            </div> 
+            <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+                <figure>
+                    <img src="./assets/Mens Casual Premium Slim Fit T-Shirts.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <p class="flex justify-between">
+                        <span class="tag">Men's Clothing</span>
+                        <span class="text-[#9ca2ac]"><i class="fa-solid fa-star text-[#fdc700]"></i>4.1(260)</span>
+                    </p>
+                    <h2 class="card-title h-14">Mens Casual Premium Slim Fit T-Shirts</h2>
+                    <p>$22.55</p>
+                    <div class="card-actions justify-around">
+                        <button class="w-36 btn"><i class="fa-solid fa-eye"></i>Details</button>
+                        <button class="w-36 btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add</button>
+                    </div>
+                </div>
+            </div> 
+            <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+                <figure>
+                    <img src="./assets/Mens Cotton Jacket.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <p class="flex justify-between">
+                        <span class="tag">Men's Clothing</span>
+                        <span class="text-[#9ca2ac]"><i class="fa-solid fa-star text-[#fdc700]"></i>4.7(500)</span>
+                    </p>
+                    <h2 class="card-title h-14">Mens Cotton Jacket</h2>
+                    <p>$55.99</p>
+                    <div class="card-actions justify-around">
+                        <button class="w-36 btn"><i class="fa-solid fa-eye"></i>Details</button>
+                        <button class="w-36 btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add</button>
+                    </div>
+                </div>
+            </div> 
+            <!-- <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+                <figure>
+                    <img src="./assets/Mens Casual Premium Slim Fit T-Shirts.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <p class="flex justify-between">
+                        <span class="tag">Men's Clothing</span>
+                        <span class="text-[#9ca2ac]"><i class="fa-solid fa-star text-[#fdc700]"></i>4.1(260)</span>
+                    </p>
+                    <h2 class="card-title h-14">Mens Casual Premium Slim Fit T-Shirts</h2>
+                    <p>$22.55</p>
+                    <div class="card-actions justify-around">
+                        <button class="w-36 btn"><i class="fa-solid fa-eye"></i>Details</button>
+                        <button class="w-36 btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add</button>
+                    </div>
+                </div>
+            </div> 
+            <div class="card bg-base-100 w-96 shadow-sm mx-auto">
+                <figure>
+                    <img src="./assets/Mens Cotton Jacket.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <p class="flex justify-between">
+                        <span class="tag">Men's Clothing</span>
+                        <span class="text-[#9ca2ac]"><i class="fa-solid fa-star text-[#fdc700]"></i>4.7(500)</span>
+                    </p>
+                    <h2 class="card-title">Mens Cotton Jacket</h2>
+                    <p>$55.99</p>
+                    <div class="card-actions justify-around">
+                        <button class="w-36 btn"><i class="fa-solid fa-eye"></i>Details</button>
+                        <button class="w-36 btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
     </section>
     <!-- footer -->
-    <Footer>
-
-    </Footer>
+    <footer class="bg-[#1e2939]">
+<div class="footer max-w-7xl mx-auto sm:footer-horizontal text-base-content p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-[#9ca2ac]">
+    <div>
+        <h4 class="font-bold text-2xl text-[#584cf4]">SwiftCart</h4>
+        <p class="w-48">Your one-stop shop for all your fashion
+        and lifestyle needs. Quality products, fast
+        delivery, and excellent support.</p>
+    </div>
+    <div>
+        <h6 class="footer-title">QUICK LINKS</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">Products</a>
+        <a class="link link-hover">About</a>
+        <a class="link link-hover">Contact</a>
+    </div>
+    <div>
+        <h6 class="footer-title">SUPPORT</h6>
+        <a class="link link-hover">FAQ</a>
+        <a class="link link-hover">Shopping</a>
+        <a class="link link-hover">Returns</a>
+        <a class="link link-hover">Privacy policy</a>
+    </div>
+    <form>
+        <h6 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h6>
+        <fieldset class="w-80">
+            <label>The latest news, articles, and resources,
+            sent to your inbox weekly.</label>
+            <div class="">
+                <input type="email" class="w-fit text-black bg-white p-2 rounded-sm" placeholder="Enter Your Email"/>
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+    </footer>
 </body>
 <script src="./scripts/index.js"></script>
 
