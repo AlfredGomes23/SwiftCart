@@ -21,10 +21,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-
-<body class="max-w-7xl mx-auto">
+<body class="">
     <!-- navbar -->
-    <nav class="navbar bg-base-100">
+    <nav class="navbar sticky top-0 z-10 px-32 mx-auto bg-white">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -36,11 +35,13 @@
                 </div>
                 <ul tabindex="-1"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 3</a></li>
+                    <li class="link-hover link-primary"><a href="/">Home</a></li>
+                    <li class="link-hover"><a href="/">Products</a></li>
+                    <li class="link-hover"><a href="/">About</a></li>
+                    <li class="link-hover"><a href="/">Contact</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost font-bold text-2xl text-[#584cf4]">SwiftCart</a>
+            <a class="font-bold text-2xl text-[#584cf4]">SwiftCart</a>
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 font-semibold">
@@ -51,12 +52,64 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a class=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="indicator" href="/">
+                <span id="indicator" class="indicator-item text-primary badge-xs badge-warning">0
+                </span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
         </div>
     </nav>
+    <!-- hero section -->
+     <header class="hero">
+        <div class=" w-full bg-black/50 h-full"></div>
+        <div class="w-7xl space-y-5 py-48 text-white">
+        <h2 class="text-4xl font-bold">Best Collection For You</h2>
+        <p class="w-2/5 text-[#d3d7de]">Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart</p>
+        <button class="text-lg btn btn-primary">Shop Now</button>
+    </div>
+     </header>
     <!-- why us -->
-    <section>
+    <section class="space-y-5 my-5 max-w-7xl mx-auto bg-base-100">
+        <h2 class="font-bold text-4xl text-center">Why Choose Us</h2>
+        <p class="text-center text-lg">We provide the best shopping experience with top-notch services.</p>
+        <div class="flex gap-3 mt-10">
+            <div class="w-96 rounded-lg shadow-md p-5 bg-white">
+                <div class="p-3 w-fit bg-[#eef2ff] rounded-md m-1 relative -top-10 left-5 shadow-md"><i class="fa-solid fa-truck-fast text-3xl text-primary"></i></div>
+                
+                <div class="space-y-5 pb-5">
+                <h2 class="text-xl font-semibold">Fast Delivery</h2>
+                <p class="text-[#9ca2ac]">Get your orders delivered to your doorstep quickly and efficiently.</p>
+            </div>
+            </div>
+            <div class="w-96 rounded-lg shadow-md p-5 bg-white">
+                <div class="p-3 w-fit bg-[#eef2ff] rounded-md m-1 relative -top-10 left-5 shadow-md"><i class="fa-regular fa-headphones text-3xl text-primary"></i></div>
+                
+                <div class="space-y-5 pb-5">
+                <h2 class="text-xl font-semibold">24/7 Support</h2>
+                <p class="text-[#9ca2ac]">Our support team is available around the clock to assist you.</p>
+            </div>
+            </div>
+            <div class="w-96 rounded-lg shadow-md p-5 bg-white">
+                <div class="p-3 w-fit bg-[#eef2ff] rounded-md m-1 relative -top-10 left-5 shadow-md"><i class="fa-solid fa-shield-halved text-4xl text-primary"></i></div>
+                
+                <div class="space-y-5 pb-5">
+                <h2 class="text-xl font-semibold">Secure Payment</h2>
+                <p class="text-[#9ca2ac]">Experience safe and secure transactions with our encrypted payment systems.</p>
+            </div>
+            </div>
+            <div class="w-96 rounded-lg shadow-md p-5 bg-white">
+                <div class="p-3 w-fit bg-[#eef2ff] rounded-md m-1 relative -top-10 left-5 shadow-md"><i class="fa-solid fa-arrows-rotate text-4xl text-primary"></i></div>
+                
+                <div class="space-y-5 pb-5">
+                <h2 class="text-xl font-semibold">Easy Returns</h2>
+                <p class="text-[#9ca2ac]">Not satisfied? Return your products easily within 30 days.</p>
+            </div>
+            </div>
 
+
+
+           
+        </div>
     </section>
     <!-- trending -->
     <section>
