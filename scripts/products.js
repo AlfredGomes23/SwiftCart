@@ -39,7 +39,7 @@ const showProducts = (category)  =>{
                     <div class="card-actions justify-around">
                         <button class="w-36 btn" onclick="p_${c.id}.showModal()"><i
                                 class="fa-solid fa-eye"></i>Details</button>
-                        <button class="w-36 btn btn-primary"><i class="fa-solid fa-cart-plus"></i>Add</button>
+                        <button class="w-36 btn btn-primary" onclick="addToCart(${c.id}, '${c.title.replace(/'/g, "\\'")}', ${c.price}, '${c.image}')"><i class="fa-solid fa-cart-plus"></i>Add</button>
                     </div>
                     <!-- card modal here -->
                     <dialog id="p_${c.id}" class="modal modal-bottom sm:modal-middle">
@@ -59,7 +59,7 @@ const showProducts = (category)  =>{
                                     </p>
                                     <h2 class="card-title h-14">${c.title}</h2>
                                     <p>${c.description}</p>
-                                    <button class="btn btn-primary mx-auto w-full"><i class="fa-solid fa-cart-plus"></i>Add</button>
+                                    <button class="btn btn-primary mx-auto w-full" onclick="addToCart(${c.id}, '${c.title.replace(/'/g, "\\'")}', ${c.price}, '${c.image}')"><i class="fa-solid fa-cart-plus"></i>Add</button>
                                 </div>
                         </div>
                 </div>
