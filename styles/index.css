@@ -18,3 +18,7 @@
 img{
     height: 256px;
 }
+.active{
+    color: white;
+    background-color: blue;
+}
