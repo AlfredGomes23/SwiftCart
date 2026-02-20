@@ -53,11 +53,16 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a class="indicator" href="/">
-                <span id="indicator" class="indicator-item text-primary badge-xs badge-warning">0
+            <button class=" indicator" popovertarget="cartItems" style="anchor-name:--anchor-1">
+                <span id="indicator" class="indicator-item badge-md text-primary">0
                 </span>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
+                <i class="fa-solid fa-cart-shopping text-lg"></i>
+            </button>
+            <ul class="dropdown w-52 rounded-box bg-base-100 shadow-sm" popover id="cartItems"
+                style="position-anchor:--anchor-1">
+            </ul>
+        </div>
+        <div class="toast alert toast-center toast-top hidden" id="toast">
         </div>
     </nav>
     <!-- hero section -->

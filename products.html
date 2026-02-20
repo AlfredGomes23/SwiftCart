@@ -30,14 +30,12 @@
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                     </svg>
                 </div>
-                <ul tabindex="-1"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                     <li class="link-hover"><a href="/">Home</a></li>
-                    <li class="link-hover  link-primary"><a href="./products.html">Products</a></li>
+                    <li class="link-hover link-primary"><a href="./products.html">Products</a></li>
                     <li class="link-hover"><a href="/">About</a></li>
                     <li class="link-hover"><a href="/">Contact</a></li>
                 </ul>
@@ -53,11 +51,16 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a class="indicator" href="/">
-                <span id="indicator" class="indicator-item text-primary badge-xs badge-warning">0
+            <button class=" indicator" popovertarget="cartItems" style="anchor-name:--anchor-1">
+                <span id="indicator" class="indicator-item badge-md text-primary">0
                 </span>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
+                <i class="fa-solid fa-cart-shopping text-lg"></i>
+            </button>
+            <ul class="dropdown w-52 rounded-box bg-base-100 shadow-sm" popover id="cartItems"
+                style="position-anchor:--anchor-1">
+            </ul>
+        </div>
+        <div class="toast alert toast-center toast-top hidden" id="toast">
         </div>
     </nav>
     <!-- hero section -->

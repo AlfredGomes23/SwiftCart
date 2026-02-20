@@ -61,15 +61,55 @@ const addToCart = (id, title, price, image) => {
         cart.push({id, price, title, image, quantity:1 });
     }
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${title} added to cart.`);
     updateCartBadge();
+    toast.classList.remove("hidden");
+    toast.classList.add("bg-success");
+    toast.innerHTML = `<span  class='text-xl font-bold'>${title} added.</span>`;
+    setTimeout(() => {
+        toast.classList.add("hidden");
+        toast.classList.remove("bg-success");
+    }, 1500);
 };
 const updateCartBadge = () =>{
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const count = cart.reduce((total, item)=> total + item.quantity, 0);
+    const total = cart.reduce((total, item)=> total +=(item.quantity*item.price), 0);
     const cartBadge = document.getElementById("indicator");
     if(cartBadge){
         cartBadge.innerHTML = count;
     }
-}
+    const cartItems = document.getElementById("cartItems");
+    cartItems.innerHTML = `<li class="text-primary px-3">Total: <span class="badge badge-primary ml-10">$ ${total}</span></li>`;
+    cart.forEach(item=>{
+        const li = document.createElement("li");
+        li.innerHTML = `<li class="grid grid-cols-3">
+                    <div class="avatar w-full">
+                        <div class="w-16 rounded">
+                            <img src="${item.image}"
+                                alt="Tailwind-CSS-Avatar-component" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col col-span-2">
+                        <h2 class="flex justify-between">${item.title.slice(0,10).concat("...")}<i onclick="deleteFromCart(${item.id})" class="fa-solid fa-trash-can hover:text-error"></i></h2>
+                        <p class="font-bold">$${item.price} x ${item.quantity}</p>
+                    </div>                    
+                </li>`;
+        cartItems.append(li);
+    })
+    };
 updateCartBadge();
+
+const deleteFromCart= id => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = cart.filter(item => item.id !== id);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    const toast = document.getElementById("toast");
+    updateCartBadge()
+    toast.classList.remove("hidden");
+    toast.classList.add("bg-error");
+    toast.innerHTML = "<span class='text-xl font-bold'>Item Deleted.</span>";
+    setTimeout(() => {
+        toast.classList.add("hidden");
+        toast.classList.remove("bg-error");
+    }, 1000);
+}
