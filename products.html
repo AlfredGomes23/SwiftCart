@@ -68,7 +68,7 @@
         <div class=" w-full bg-black/50 h-full"></div>
         <div class="md:w-7xl space-y-5 py-20 text-white text-center md:text-left">
             <h2 class="text-3xl font-bold text-center">Our Products</h2>
-            <ul class="flex flex-row gap-5 justify-center" id="categoryContainer">
+            <ul class="grid grid-cols-2 md:flex gap-5 justify-center" id="categoryContainer">
                 <li class="btn btn-outline category active" onclick="handleAllCategoryClick(this, 'all')">all</li>
                 <li id="loading" class="hidden"><span class="loading loading-dots loading-xl"></span></li>
             </ul>
@@ -88,10 +88,11 @@
             class="footer max-w-7xl mx-auto sm:footer-horizontal text-base-content p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-[#9ca2ac]">
             <div>
                 <h4 class="font-bold text-2xl text-[#584cf4]">SwiftCart</h4>
-                <p class="w-48">Your one-stop shop for all your fashion
+                <p class="md:w-48">Your one-stop shop for all your fashion
                     and lifestyle needs. Quality products, fast
                     delivery, and excellent support.</p>
             </div>
+
             <div>
                 <h6 class="footer-title">QUICK LINKS</h6>
                 <a class="link link-hover">Home</a>
@@ -121,12 +122,12 @@
         </div>
         <hr class="max-w-7xl text-[#9ca2ac] mx-auto">
         <div
-            class="footer max-w-7xl mx-auto sm:footer-horizontal text-neutral-content p-5 text-[#9ca2ac] flex justify-between">
+            class="footer max-w-7xl mx-auto sm:footer-horizontal text-neutral-content p-5 text-[#9ca2ac] flex flex-col md:flex-row justify-center items-center md:justify-between">
             <aside>
                 <p> © 2025 SwiftCart, Inc. All rights reserved.</p>
             </aside>
 
-            <div class="flex flex-col md:flex-row gap-3 text-xl">
+            <div class="flex flex-row gap-3 text-xl">
                 <a><i class="fa-brands fa-facebook-f"></i></a>
                 <a><i class="fa-brands fa-twitter"></i></a>
                 <a><i class="fa-brands fa-instagram"></i></a>

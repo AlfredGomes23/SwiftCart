@@ -89,13 +89,13 @@ const updateCartBadge = () =>{
         cartBadge.innerHTML = count;
     }
     const cartItems = document.getElementById("cartItems");
-    cartItems.innerHTML = `<li class="text-primary px-3">Total: <span class="badge badge-primary ml-10">$ ${total}</span></li>`;
-    cart.forEach(item=>{
+    cartItems.innerHTML = `<li class="text-primary font-bold px-3">Total: <span class="badge badge-primary ml-10">$ ${total.toFixed(3)}</span></li>`;
+    cart.length ? cart.forEach(item=>{
         const li = document.createElement("li");
         li.innerHTML = `<li class="grid grid-cols-3">
-                    <div class="avatar w-full">
+                    <div class="avatar ">
                         <div class="w-16 rounded">
-                            <img src="${item.image}"
+                            <img src="${item.image}" class="h-full w-full object-cover"
                                 alt="Tailwind-CSS-Avatar-component" />
                         </div>
                     </div>
@@ -105,7 +105,7 @@ const updateCartBadge = () =>{
                     </div>                    
                 </li>`;
         cartItems.append(li);
-    })
+    }) : cartItems.append(document.createElement("li").innerHTML = "No Item Added In the Cart")
     };
 updateCartBadge();
 
