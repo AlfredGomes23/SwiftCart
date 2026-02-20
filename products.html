@@ -70,7 +70,7 @@
             <h2 class="text-3xl font-bold text-center">Our Products</h2>
             <ul class="flex flex-row gap-5 justify-center" id="categoryContainer">
                 <li class="btn btn-outline category active" onclick="handleAllCategoryClick(this, 'all')">all</li>
-
+                <li id="loading" class="hidden"><span class="loading loading-dots loading-xl"></span></li>
             </ul>
         </div>
     </header>
@@ -78,9 +78,9 @@
     <section class="max-w-7xl mx-auto">
         <h2 class="text-3xl font-bold ml-5 md:ml-0 my-10"></h2>
         <!-- card container -->
-        <div id="productContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-5">
-
+        <div id="productContainer" class="grid grid-cols-1 md:grid-cols-3 space-y-5">
         </div>
+        <div class="mx-auto mb-5 text-center text-primary hidden" id="spinner"><span class="loading loading-spinner loading-xl"></span></div>
     </section>
     <!-- footer -->
     <footer class="bg-[#1e2939]">
@@ -137,7 +137,6 @@
         </div>
     </footer>
 </body>
-<script src="./scripts/products.js"></script>
 <script src="./scripts/index.js"></script>
 
 </html>
